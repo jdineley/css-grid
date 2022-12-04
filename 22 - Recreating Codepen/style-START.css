@@ -1,3 +1,7 @@
+:root {
+  --grey: #343436;
+}
+
 html {
   box-sizing: border-box;
   font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
@@ -15,6 +19,10 @@ html {
 
 body {
   margin: 0;
+}
+
+.codepen {
+  color: white;
 }
 
 iframe {
@@ -36,25 +44,22 @@ h6 {
 .pen {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   padding: 10px;
   background-color: black;
   color: white;
-  
+  border-bottom: 5px solid var(--grey);
 }
 
 button {
   border-radius: 5px;
   background-color: rgb(60, 60, 60);
   color: white;
-}
-
-.pen button {
-  padding: 10px;
-  
-  font-size: 0.9rem;
+  border: none;
   position: relative;
-  /* font-weight: 600; */
+  padding: 10px;
+  font-size: 15px;
+
 }
 
 .button--dirty:before {
@@ -78,6 +83,7 @@ button {
   grid-template-columns: repeat(3, 1fr);
   padding: 5px;
   background: #1b2b34;
+  /* gap: 5px; */
   
 }
 
@@ -87,6 +93,35 @@ button {
   gap: 5px;
   align-items: center;
   background: rgba(0,0,0,0.1);
-  color: white;
-  /* padding-block: 5px; */
+  padding: 5px;
+}
+
+.button--small {
+  font-size: 12px;
+  padding: 4px;
+}
+
+.editor {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.editor__code {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.editor__number {
+  display: block;
+  padding: 0 10px;
+  
+}
+
+.editor__input {
+  resize: none;
+  background: none;
+  border: none;
+  color: grey;
+  font-size: 16px;
+  line-height:19px;
 }
