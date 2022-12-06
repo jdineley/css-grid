@@ -12,3 +12,26 @@ img {
   max-width: 100%;
 }
 
+.top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+
+}
+
+
+
+.top > * {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  padding-left: 50px;
+}
+
+.hero {
+  /*grid-area: row-start / column-start / row-end / column-end */
+  grid-area: 1 / 1 / 4 / 3;
+  background-image: url('images/taco.jpg');
+  padding-left: 50px;
+  justify-content: start;
+}
